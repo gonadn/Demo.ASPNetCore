@@ -32,7 +32,7 @@ In order for the user to authenticate on the App, A new app registration should 
 - Click __Grant admin consent for {tenant}__
 
 - Go to __Certificates & Secrets__ and register a new client secret.
-- If do not have a certificate created, then run this powershell file , /Demo.ASPNetCore,/CreateCertificate.ps1,-Go%20to%20file below in a PowerShell (Run PowerShell as administrator)
+- If dont have a certificate created, then run this powershell file , /Demo.ASPNetCore,/CreateCertificate.ps1,-Go%20to%20file below in a PowerShell (Run PowerShell as administrator)
 
 
 - From __Overview__,
