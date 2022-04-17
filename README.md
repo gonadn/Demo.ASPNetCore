@@ -57,4 +57,5 @@ Be sure to have a Team in Microsoft Teams backing the modern team site in the ab
   Hit F5 in Visual studio to execute the ASP.Net Core app.
   When trying to access one of the sections, the applications prompts you for signing in.
 
-  ![preview image of the running app](preview.png)
+  ![aspimg](https://user-images.githubusercontent.com/3224441/163723661-6bc59e23-385a-45d7-9d6f-c4b40ef8c398.PNG)
+
