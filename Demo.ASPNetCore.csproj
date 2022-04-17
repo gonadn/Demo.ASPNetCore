@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>aspnet-Demo.ASPNetCore-b1d1e506-df7c-44e8-a481-387318235e2f</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>1</WebProject_DirectoryAccessLevelKey>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.43.1" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.23.1" />
+    <PackageReference Include="PnP.Core.Auth" Version="1.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.17.0" />
+  </ItemGroup>
+
+</Project>
