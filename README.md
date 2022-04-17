@@ -1,10 +1,10 @@
-﻿# PnP Core SDK - ASP.NET Core Sample
+﻿# Azure Development Demo - ASP.NET Core Sample
 
 This solution demonstrates how the PnP Core SDK can be used in a ASP.NET Core web application
 
 ## Source code
 
-You can find the sample source code here: [/samples/Demo.ASPNetCore](https://github.com/pnp/pnpcore/tree/dev/samples/Demo.ASPNetCore)
+You can find the sample source code here: [/Demo.ASPNetCore](https://github.com/gonadn/Demo.ASPNetCore)
 
 # Run the sample
 
@@ -16,7 +16,7 @@ In order for the user to authenticate on the App, A new app registration should 
 
 - In App registrations, click __New registration__
 
-- Enter a name for your new app, make sure *Accounts in this organizational directory only* is selected. As the Redirect URI, in Web platform enter __https://localhost:44336/signin-oidc__ (The port may vary according to your Visual Studio)
+- Enter a name for your new app, make sure *Accounts in this organizational directory only* is selected. As the Redirect URI, in Web platform enter __https://localhost:44336/signin__ (The port may vary according to your Visual Studio)
 
 - Under __Implicit grant__ section, check __ID tokens__
 
@@ -32,6 +32,12 @@ In order for the user to authenticate on the App, A new app registration should 
 - Click __Grant admin consent for {tenant}__
 
 - Go to __Certificates & Secrets__ and register a new client secret.
+- If do not have a certificate created, then run this comman below in a PowerShell (Run PowerShell as administrator)
+- $cert = New-SelfSignedCertificate -Subject "CN=xxxxxxx" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 
+- -KeyAlgorithm RSA -HashAlgorithm SHA256
+Export-Certificate -Cert $cert -FilePath "C:\CertName.cer"
+$mypwd = ConvertTo-SecureString -String "" -Force -AsPlainText
+Export-PfxCertificate -Cert $cert -FilePath "C:\CertName.pfx" -Password $mypwd
 
 - From __Overview__,
 -- copy the value of __Directory (tenant) ID__
