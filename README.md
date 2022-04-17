@@ -33,11 +33,11 @@ In order for the user to authenticate on the App, A new app registration should 
 
 - Go to __Certificates & Secrets__ and register a new client secret.
 - If do not have a certificate created, then run this comman below in a PowerShell (Run PowerShell as administrator)
-- $cert = New-SelfSignedCertificate -Subject "CN=xxxxxxx" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 
+- ($cert = New-SelfSignedCertificate -Subject "CN=xxxxxxx" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 
 - -KeyAlgorithm RSA -HashAlgorithm SHA256
 Export-Certificate -Cert $cert -FilePath "C:\CertName.cer"
 $mypwd = ConvertTo-SecureString -String "" -Force -AsPlainText
-Export-PfxCertificate -Cert $cert -FilePath "C:\CertName.pfx" -Password $mypwd
+Export-PfxCertificate -Cert $cert -FilePath "C:\CertName.pfx" -Password $mypwd)
 
 - From __Overview__,
 -- copy the value of __Directory (tenant) ID__
